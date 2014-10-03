@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" href="styles/main.css" type="text/css" media="screen" charset="utf-8" />
+	<style>
+	</style>
+	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	<script type="text/javascript">google.load("jquery", "1.7");</script>
+	<script type="text/javascript">
+		$(function() {
+			$("#menu li").hover(function() {
+				$(this).find('.sub').show();
+			}, function() {
+				$(this).find('.sub').hide();
+			});
+			$(".sub").each(function(index){
+				if(index === 0) {
+					$(this).show();
+				}
+				var width = $(this).closest('ul').css('width');
+				$(this).css('width', width);
+			});
+		});
+		
+
+	</script>
+	
+</head>
+<body>
+	<ul id="menu">
+		<li>メニュー1
+			<div class="sub">
+				<ul>
+					<li><a href="#">サブメニュー1</a></li>
+					<li><a href="#">サブメニュー2</a></li>
+					<li><a href="#">サブメニュー3</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">サブメニュー4</a></li>
+					<li><a href="#">サブメニュー5</a></li>
+					<li><a href="#">サブメニュー6</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">サブメニュー7</a></li>
+					<li><a href="#">サブメニュー8</a></li>
+					<li><a href="#">サブメニュー9</a></li>
+				</ul>
+
+				<div id="img">
+					<img src="img/tetote.png">
+				</div>
+
+			</div>	
+		</li>
+		<li>メニュー2
+			<div class="sub">
+				<ul>
+					<li><a href="#">サブメニュー1</a></li>
+					<li><a href="#">サブメニュー2</a></li>
+					<li><a href="#">サブメニュー3</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">サブメニュー4</a></li>
+					<li><a href="#">サブメニュー5</a></li>
+					<li><a href="#">サブメニュー6</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">サブメニュー7</a></li>
+					<li><a href="#">サブメニュー8</a></li>
+					<li><a href="#">サブメニュー9</a></li>
+				</ul>
+
+				<div id="img">
+					<img src="img/tetote.png">
+				</div>
+
+			</div>	
+		</li>
+		<li>メニュー3
+			<div class="sub">
+				<ul>
+					<li><a href="#">サブメニュー1</a></li>
+					<li><a href="#">サブメニュー2</a></li>
+					<li><a href="#">サブメニュー3</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">サブメニュー4</a></li>
+					<li><a href="#">サブメニュー5</a></li>
+					<li><a href="#">サブメニュー6</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">サブメニュー7</a></li>
+					<li><a href="#">サブメニュー8</a></li>
+					<li><a href="#">サブメニュー9</a></li>
+				</ul>
+
+				<div id="img">
+					<img src="img/tetote.png">
+				</div>
+
+			</div>	
+		</li>
+		<li>メニュー4
+			<div class="sub">
+				<ul>
+					<li><a href="#">サブメニュー1</a></li>
+					<li><a href="#">サブメニュー2</a></li>
+					<li><a href="#">サブメニュー3</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">サブメニュー4</a></li>
+					<li><a href="#">サブメニュー5</a></li>
+					<li><a href="#">サブメニュー6</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">サブメニュー7</a></li>
+					<li><a href="#">サブメニュー8</a></li>
+					<li><a href="#">サブメニュー9</a></li>
+				</ul>
+
+				<div id="img">
+					<img src="img/tetote.png">
+				</div>
+
+			</div>	
+		</li>
+		<li>メニュー5
+			<div class="sub">
+				<ul>
+					<li><a href="#">サブメニュー1</a></li>
+					<li><a href="#">サブメニュー2</a></li>
+					<li><a href="#">サブメニュー3</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">サブメニュー4</a></li>
+					<li><a href="#">サブメニュー5</a></li>
+					<li><a href="#">サブメニュー6</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">サブメニュー7</a></li>
+					<li><a href="#">サブメニュー8</a></li>
+					<li><a href="#">サブメニュー9</a></li>
+				</ul>
+
+				<div id="img">
+					<img src="img/tetote.png">
+				</div>
+
+			</div>	
+		</li>										
+
+	</ul>
+
+	
+		
+</body>
+
+</html>
+

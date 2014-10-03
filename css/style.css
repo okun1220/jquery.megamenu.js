@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+#menu {
+  width: 1060px;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+#menu > li{
+  background: blue;
+	position: relative;
+  float: left;
+  margin: 0;
+  padding: 5px;
+  width: 200px;
+  height: 20px;
+  border: solid 1px #ccc;
+  list-style: none;
+  font-family: "Hiragino Maru Gothic ProN", Meiryo, fantasy;
+  font-size: 11px;
+}
+
+.sub {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: -1px;
+  /*width: 525px;*/
+  background: #eee;
+  list-style: none;
+}
+
+/*
+.sub li{
+  list-style: none;
+  background: yellow;
+}
+
+.sub ul li a {
+  background: red;
+  display: inline-block;
+}
+.sub ul li a:hover {
+  background: #999;
+  color: #fff;
+}
+
+.sub ul{
+  float: left;
+  line-height:  4em;
+}
+
+.sub ul li ul{
+  float: left;
+  line-height:  4em;
+}
+*/
+
+.sub ul {
+  display: none;
+}
+/*.
+#mozi{
+  float: left;
+  line-height: 2em;
+}
+#mozi2{
+  float: left;
+  line-height: 2em;
+  
+}
+*/
+#img{
+  width: 160px;
+  height: 160px;
+  float: left;
+  margin: 20px;
+ 
+}
+
