@@ -4,35 +4,51 @@
 	<meta charset="utf-8"/>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
-	<link rel="stylesheet" href="styles/main.css" type="text/css" media="screen" charset="utf-8" />
-	<style>
-	</style>
 	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
 	<script type="text/javascript">google.load("jquery", "1.7");</script>
 	<script type="text/javascript">
 		$(function() {
-			$("#menu li").hover(function() {
-				$(this).find('.sub').show();
-			}, function() {
-				$(this).find('.sub').hide();
-			});
-			$(".sub").each(function(index){
-				if(index === 0) {
-					$(this).show();
-				}
-				var width = $(this).closest('ul').css('width');
-				$(this).css('width', width);
+			// プラグインを使う人が指定する
+			var $menu = $('#menu');
+			var option = {};
+			option.spike_width = 10;
+
+			// プラグイン内
+			var menu_offset = $menu.offset();
+
+			$menu.find("> li").each(function() {
+				var $this = $(this);
+				var $div = $this.find('> div');
+
+				// コンテンツのスタイルを指定
+				$div.css({
+					'width': $menu.css('width'),
+					'left' : menu_offset.left,
+					'top' : menu_offset.top + $menu.height()
+				});
+				// △の位置調整
+				var left = $this.offset().left - menu_offset.left + ($this.width() / 2) - option.spike_width;
+				var $speech_ballon = $('<span>').css({
+					'left': left,
+					'width': '5px',
+					'height': '5px',
+					'position': 'absolute',
+  					'border': '10px solid #f00',
+					// 'border_bottom_color': '#f00',
+					//'bottom': '100%',
+					'zIndex': 999
+				}).html('aaa');
+				$div.append($speech_ballon);
 			});
 		});
-
-
 	</script>
 	
 </head>
 <body>
+	<p>aaaaaaaaaaaaaaaa</p>
 	<ul id="menu">
 		<li>メニュー1
-			<div class="sub">
+			<div>
 				<ul>
 					<li><a href="#">サブメニュー1</a></li>
 					<li><a href="#">サブメニュー2</a></li>
@@ -48,115 +64,99 @@
 					<li><a href="#">サブメニュー8</a></li>
 					<li><a href="#">サブメニュー9</a></li>
 				</ul>
-
-				<div id="img">
-					<img src="img/tetote.png">
+				<div>
+					<img alt="" src="img/tetote.png">
 				</div>
-
 			</div>	
 		</li>
 		<li>メニュー2
-			<div class="sub">
+			<div>
 				<ul>
-					<li><a href="#">サブメニュー1</a></li>
-					<li><a href="#">サブメニュー2</a></li>
-					<li><a href="#">サブメニュー3</a></li>
+					<li><a href="#">サブメニュー10</a></li>
+					<li><a href="#">サブメニュー11</a></li>
+					<li><a href="#">サブメニュー12</a></li>
 				</ul>
 				<ul>
-					<li><a href="#">サブメニュー4</a></li>
-					<li><a href="#">サブメニュー5</a></li>
-					<li><a href="#">サブメニュー6</a></li>
+					<li><a href="#">サブメニュー13</a></li>
+					<li><a href="#">サブメニュー14</a></li>
+					<li><a href="#">サブメニュー15</a></li>
 				</ul>
 				<ul>
-					<li><a href="#">サブメニュー7</a></li>
-					<li><a href="#">サブメニュー8</a></li>
-					<li><a href="#">サブメニュー9</a></li>
+					<li><a href="#">サブメニュー16</a></li>
+					<li><a href="#">サブメニュー17</a></li>
+					<li><a href="#">サブメニュー18</a></li>
 				</ul>
-
-				<div id="img">
-					<img src="img/tetote.png">
+				<div>
+					<img alt="" src="img/tetote.png">
 				</div>
-
 			</div>	
 		</li>
 		<li>メニュー3
-			<div class="sub">
+			<div>
 				<ul>
-					<li><a href="#">サブメニュー1</a></li>
-					<li><a href="#">サブメニュー2</a></li>
-					<li><a href="#">サブメニュー3</a></li>
+					<li><a href="#">サブメニュー19</a></li>
+					<li><a href="#">サブメニュー20</a></li>
+					<li><a href="#">サブメニュー21</a></li>
 				</ul>
 				<ul>
-					<li><a href="#">サブメニュー4</a></li>
-					<li><a href="#">サブメニュー5</a></li>
-					<li><a href="#">サブメニュー6</a></li>
+					<li><a href="#">サブメニュー22</a></li>
+					<li><a href="#">サブメニュー23</a></li>
+					<li><a href="#">サブメニュー24</a></li>
 				</ul>
 				<ul>
-					<li><a href="#">サブメニュー7</a></li>
-					<li><a href="#">サブメニュー8</a></li>
-					<li><a href="#">サブメニュー9</a></li>
+					<li><a href="#">サブメニュー25</a></li>
+					<li><a href="#">サブメニュー26</a></li>
+					<li><a href="#">サブメニュー27</a></li>
 				</ul>
-
-				<div id="img">
-					<img src="img/tetote.png">
+				<div>
+					<img alt="" src="img/tetote.png">
 				</div>
-
 			</div>	
 		</li>
 		<li>メニュー4
-			<div class="sub">
+			<div>
 				<ul>
-					<li><a href="#">サブメニュー1</a></li>
-					<li><a href="#">サブメニュー2</a></li>
-					<li><a href="#">サブメニュー3</a></li>
+					<li><a href="#">サブメニュー28</a></li>
+					<li><a href="#">サブメニュー29</a></li>
+					<li><a href="#">サブメニュー30</a></li>
 				</ul>
 				<ul>
-					<li><a href="#">サブメニュー4</a></li>
-					<li><a href="#">サブメニュー5</a></li>
-					<li><a href="#">サブメニュー6</a></li>
+					<li><a href="#">サブメニュー31</a></li>
+					<li><a href="#">サブメニュー32</a></li>
+					<li><a href="#">サブメニュー33</a></li>
 				</ul>
 				<ul>
-					<li><a href="#">サブメニュー7</a></li>
-					<li><a href="#">サブメニュー8</a></li>
-					<li><a href="#">サブメニュー9</a></li>
+					<li><a href="#">サブメニュー34</a></li>
+					<li><a href="#">サブメニュー35</a></li>
+					<li><a href="#">サブメニュー36</a></li>
 				</ul>
-
-				<div id="img">
-					<img src="img/tetote.png">
+				<div>
+					<img alt="" src="img/tetote.png">
 				</div>
-
 			</div>	
 		</li>
 		<li>メニュー5
-			<div class="sub">
+			<div>
 				<ul>
-					<li><a href="#">サブメニュー1</a></li>
-					<li><a href="#">サブメニュー2</a></li>
-					<li><a href="#">サブメニュー3</a></li>
+					<li><a href="#">サブメニュー37</a></li>
+					<li><a href="#">サブメニュー38</a></li>
+					<li><a href="#">サブメニュー39</a></li>
 				</ul>
 				<ul>
-					<li><a href="#">サブメニュー4</a></li>
-					<li><a href="#">サブメニュー5</a></li>
-					<li><a href="#">サブメニュー6</a></li>
+					<li><a href="#">サブメニュー40</a></li>
+					<li><a href="#">サブメニュー41</a></li>
+					<li><a href="#">サブメニュー42</a></li>
 				</ul>
 				<ul>
-					<li><a href="#">サブメニュー7</a></li>
-					<li><a href="#">サブメニュー8</a></li>
-					<li><a href="#">サブメニュー9</a></li>
+					<li><a href="#">サブメニュー43</a></li>
+					<li><a href="#">サブメニュー44</a></li>
+					<li><a href="#">サブメニュー45</a></li>
 				</ul>
-
-				<div id="img">
-					<img src="img/tetote.png">
+				<div>
+					<img alt="" src="img/tetote.png">
 				</div>
-
 			</div>	
 		</li>										
-
 	</ul>
-
-	
-		
 </body>
-
 </html>
-

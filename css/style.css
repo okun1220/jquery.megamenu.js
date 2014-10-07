@@ -1,7 +1,21 @@
 @charset "UTF-8";
 
+body {
+  text-align: center;
+}
+
 #menu {
   width: 1060px;
+  text-align: left;
+  margin: auto;
+  background: gray;
+
+}
+
+#menu:after {
+  clear: both;
+  content: '';
+  display: block;
 }
 
 ul,
@@ -11,8 +25,7 @@ li {
 }
 
 #menu > li{
-  background: blue;
-	position: relative;
+  background: transparent;
   float: left;
   margin: 0;
   padding: 5px;
@@ -24,61 +37,47 @@ li {
   font-size: 11px;
 }
 
-.sub {
+#menu > li > div {
   display: none;
-  position: absolute;
-  top: 30px;
-  left: -1px;
+  /*top: 30px;
+  left: -1px;*/
   /*width: 525px;*/
   background: #eee;
   list-style: none;
+
 }
 
-/*
-.sub li{
+#menu > li:hover > div {
+  display: block;
+  position: absolute;
+}
+
+#menu > li > div li {
   list-style: none;
-  background: yellow;
 }
 
-.sub ul li a {
-  background: red;
+#menu > li > div ul li a {
   display: inline-block;
 }
-.sub ul li a:hover {
+
+#menu > li > div ul li a:hover {
   background: #999;
   color: #fff;
 }
 
-.sub ul{
+#menu > li > div ul{
   float: left;
-  line-height:  4em;
+  line-height:  6em;
 }
 
-.sub ul li ul{
+#menu > li > div ul li ul{
   float: left;
-  line-height:  4em;
+  line-height:  6em;
 }
-*/
 
-.sub ul {
-  display: none;
-}
-/*.
-#mozi{
-  float: left;
-  line-height: 2em;
-}
-#mozi2{
-  float: left;
-  line-height: 2em;
-  
-}
-*/
-#img{
+#menu > li > div div img {
   width: 160px;
   height: 160px;
   float: left;
   margin: 20px;
- 
 }
-
