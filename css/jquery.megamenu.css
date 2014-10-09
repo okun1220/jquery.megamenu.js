@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+ul.megamenu-wrapper,
+.megamenu-wrapper li {
+  margin: 0;
+  padding: 0;
+}
+
+.megamenu-wrapper:after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+.megamenu-wrapper > li {
+  float: left;
+}
+
+.megamenu-wrapper li {
+  list-style: none;
+}
+
+.megamenu-wrapper > li > div {
+  display: none;
+}
+
+.megamenu-wrapper > li:hover > div {
+  display: block;
+  position: absolute;
+}
